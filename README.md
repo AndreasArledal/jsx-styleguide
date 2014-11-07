@@ -27,7 +27,7 @@ Fetching from DOM.
     React.renderComponent(<MyComponent name={name} />);
      
     //Good
-    <div id="first-name" data-name="Henrik"></div>
+    <div id="first-name" data-name="Henrik">Henrik</div>
     var div = document.querySelector('#first-name);
     React.renderComponent(<MyComponent data={div.dataset} />);
 
@@ -54,8 +54,10 @@ Fetching from an API
       },
       loadData: function () {
         var myPromise = Api.get/put/post/destroy('endpoint/12', someData);
+        //use .bind() if you want to use `this.setState()` within your callbacks.
+        //or put success/error handlers on your React class to get around using .bind();
         var success = function () {};
-        var error = function () {}; //use .bind() if you want to use `this.setState()` within your callbacks.
+        var error = function () {}; 
      
         myPromise.then(success, error);
       }
