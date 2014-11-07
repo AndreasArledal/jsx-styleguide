@@ -131,3 +131,44 @@ ___
         </ul>
       );
     }
+
+___
+
+###Formatting of tags
+
+
+Shorter and simpler tags
+    
+    //Bad
+    render: function () {
+      var someHref = 'http://www.github.com/';
+      var classes = cx({
+        'active': true
+      });
+      var someId = "github-link";
+      return (
+        <div>
+          <a href={someHref}
+             id={someId}
+             className={someClasses}
+          > 
+          {this.props.myLinkText}
+          </a>
+        </div>
+      );
+    }
+    //Good
+    render: function () {
+      var someHref = 'http://www.github.com/';
+      var classes = cx({
+        'active': true
+      });
+      var someId = "github-link";
+      return (
+        <div>
+          <a href={someHref} className={classes} id={someId}>{this.props.myLinkText}</a>
+        </div>
+      )
+    }
+  
+
