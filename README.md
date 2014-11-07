@@ -123,7 +123,7 @@ ___
     //Good
     render: function () {
       var listItems = _.map(this.state.listItems, function(item) {
-        return (<ListItem data={item.title} key={} />);
+        return (<ListItem data={item.title} key={item.id} />);
       });
       return (
         <ul>
