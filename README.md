@@ -67,13 +67,14 @@ ___
 
     //Bad
     getInitialState: function () {
-      return {age: 12, name: undefined}; || return {age: 12, name: null}; 
+      return {age: 12, name: undefined}; 
     }
      
     //Good
     getInitialState: function () {
       return {
-        age: 12
+        age: 12,
+        name: null
       };
     }
 
@@ -122,7 +123,7 @@ ___
     //Good
     render: function () {
       var listItems = _.map(this.state.listItems, function(item) {
-        return (<ListItem data={item.title} />);
+        return (<ListItem data={item.title} key={} />);
       });
       return (
         <ul>
