@@ -12,11 +12,13 @@ only required with React 0.11.2 or if you want to safe guard.
     */
     //Good
     /** @jsx React.DOM */
+___
 
 Initial data
 Your component probably needs some initial data, this is good, you're allowed two different types of loading of data.
     
-    Fetching from DOM.
+Fetching from DOM.
+
     //Bad
     <div id="first-name">
       Henrik
@@ -28,9 +30,9 @@ Your component probably needs some initial data, this is good, you're allowed tw
     <div id="first-name" data-name="Henrik"></div>
     var div = document.querySelector('#first-name);
     React.renderComponent(<MyComponent data={div.dataset} />);
- 
 
-    Fetching from an API
+Fetching from an API
+
     //Bad
     React.createClass({
         componentWillMount: function () {
@@ -59,6 +61,7 @@ Your component probably needs some initial data, this is good, you're allowed tw
       }
     });
 
+___
 
 Empty state variables in `getInitialState`
 
@@ -73,6 +76,8 @@ Empty state variables in `getInitialState`
         age: 12
       };
     }
+
+___
 
 Check state in render
 
@@ -97,6 +102,8 @@ Check state in render
         );
       }
     }
+
+___
     
 Render multiple new React components
 
