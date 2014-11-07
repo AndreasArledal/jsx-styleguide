@@ -14,7 +14,7 @@ only required with React 0.11.2 or if you want to safe guard.
     /** @jsx React.DOM */
 ___
 
-Initial data
+###Initial data
 Your component probably needs some initial data, this is good, you're allowed two different types of loading of data.
     
 Fetching from DOM.
@@ -63,7 +63,7 @@ Fetching from an API
 
 ___
 
-Empty state variables in `getInitialState`
+###Empty state variables in `getInitialState`
 
     //Bad
     getInitialState: function () {
@@ -79,7 +79,7 @@ Empty state variables in `getInitialState`
 
 ___
 
-Check state in render
+###Check state in render
 
     //Bad
     render: function () {
@@ -105,7 +105,7 @@ Check state in render
 
 ___
     
-Render multiple new React components
+###Render multiple new React components
 
     //Bad
     render: function () {
