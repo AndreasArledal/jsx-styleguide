@@ -111,7 +111,7 @@ Render multiple new React components
     render: function () {
       return (
         <ul>
-        {_.map(this.state.listItems, function(item) {
+        {this.state.listItems.map(function(item) {
             return (<ListItem data={item.title} />)
           }) 
         }
