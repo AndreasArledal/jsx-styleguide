@@ -67,10 +67,13 @@ ___
 
     //Bad
     getInitialState: function () {
-      return {age: 12, name: undefined}; 
+      return {
+        age: 12, 
+        name: undefined
+      }; 
     }
      
-    //Good
+    //Good - always prefer null to undefined.
     getInitialState: function () {
       return {
         age: 12,
