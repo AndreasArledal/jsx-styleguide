@@ -89,7 +89,7 @@ ___
 
     //Bad
     render: function () {
-      if(this.state.age !== undefined) {
+      if(this.state.age === undefined) {
         return (<div>No data found</div>);
       } else {
         return (<div>Your age is {this.state.age}</div>);
