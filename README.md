@@ -65,6 +65,28 @@ Fetching from an API
 
 ___
 
+###Referencing props or state in a components render function
+When referencing props or state in the render function, there should be no spaces around the curlies.
+
+//Bad
+render: function () {
+  return (
+    <div>
+      { this.props.porcupine }
+    </div>
+  );
+} 
+
+//Good
+render: function () {
+  return (
+    <div>
+      {this.props.porcupine}
+    </div>
+  )
+}
+
+___
 ###Empty state variables in `getInitialState`
 
     //Bad
