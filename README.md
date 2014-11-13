@@ -14,6 +14,12 @@ only required with React 0.11.2 or if you want to safe guard.
 
 //Good
 /** @jsx React.DOM */
+
+//Good
+/**
+  * @jsx React.DOM
+  * Other documentation...
+*/
 ```
 
 ___
